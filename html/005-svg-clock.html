@@ -8,21 +8,49 @@
 </head>
 <body>
 <section class="clocks">
-    <section class="clock-analog" id="clock-analog-one"></section>
-    <section class="clock-analog" id="clock-analog-two"></section>
-    <section class="clock-analog" id="clock-analog-three"></section>
-    <section class="clock-analog" id="clock-analog-four"></section>
-    <section class="clock-analog" id="clock-analog-five"></section>
-    <section class="clock-analog" id="clock-analog-six"></section>
-    <section class="clock-analog" id="clock-analog-seven"></section>
-    <section class="clock-analog" id="clock-analog-eight"></section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-one"></section>
+        <h3 class="clock-city">Wellington</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-two"></section>
+        <h3 class="clock-city">Singapore</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-three"></section>
+        <h3 class="clock-city">New Delhi</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-four"></section>
+        <h3 class="clock-city">Prague</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-five"></section>
+        <h3 class="clock-city">Sao Paulo</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-six"></section>
+        <h3 class="clock-city">Toronto</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-seven"></section>
+        <h3 class="clock-city">San Francisco</h3>
+    </section>
+    <section class="clock-analog-city">
+        <section class="clock-analog" id="clock-analog-eight"></section>
+        <h3 class="clock-city">Baker Island</h3>
+    </section>
 </section>
 
 <!-- Script to draw and redraw clocks every second. -->
 <script type="text/javascript">
-  const watchIds = ["clock-analog-one", "clock-analog-two", "clock-analog-three", "clock-analog-four",
-    "clock-analog-five", "clock-analog-six", "clock-analog-seven", "clock-analog-eight"];
-  let watches = watchIds.map(w => new SVGWatch(w));
+  const watchIds = [
+    {id: "clock-analog-one", city: "Wellington", tz: 13}, {id: "clock-analog-two", city: "Singapore", tz: 8},
+    {id: "clock-analog-three", city: "New Delhi", tz: 5.5}, {id: "clock-analog-four", city: "Prague", tz: 1},
+    {id: "clock-analog-five", city: "Sao Paulo", tz: -3}, {id: "clock-analog-six", city: "Toronto", tz: -5},
+    {id: "clock-analog-seven", city: "San Francisco", tz: -8}, {id: "clock-analog-eight", city: "Baker Island", tz: -12}
+  ];
+  let watches = watchIds.map(w => new SVGWatch(w.id, w.city, w.tz));
   watches.forEach(w => w.drawClock());
   setInterval(() => watches.forEach(w => w.redrawHands()), 1000);
 </script>

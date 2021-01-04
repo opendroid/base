@@ -1,5 +1,12 @@
 "use strict";
 
+// timeAtUTCOffset Gets time in a timezone at offset
+function timeAtUTCOffset(offsetHours) {
+  const localTime = new Date();
+  const utcDate = localTime.getTime() + localTime.getTimezoneOffset() * 60000;
+  return  new Date(utcDate + offsetHours * 3600000); // 60 * 60 * 1000 ms
+}
+
 // radians is a convenience method to convert degrees to radians
 function radians(degrees) {
   return degrees * Math.PI / 180
@@ -12,15 +19,20 @@ function polarToCartesian(h, deg) {
   }
 }
 
-// SVGWatch creates a watch in a viewport that covers 80% of width
+// SVGWatch creates a watch in a viewport that covers 80% of viewport width
 class SVGWatch {
-  constructor(id) {
+  constructor(id, city, tzOffsetHours) {
     this.svgWidth = this.svgHeight = 100; // SVG Canvas size
     this.radius = this.svgWidth * 0.4; // 40% of canvas width
+    this.hhLength = this.radius * 0.3;
+    this.mmLength = this.radius * 0.7;
+    this.ssLength = this.radius * 0.8;
     this.cx = this.svgWidth / 2; // Center of circle (cx, cy)
     this.cy = this.svgHeight / 2;
     this.clockid = id;
     this.clockhands = id + "-hands"; // ID for child svg "-hands", to be redrawn every second
+    this.city = city;
+    this.tz = tzOffsetHours;
   }
 
   // drawClock within a viewBox of 0, 0, 100, 100. Canvas height width ignored. Watch is always drawn in viewport.
@@ -34,20 +46,20 @@ class SVGWatch {
   createClockSVG() {
     // Draw out circle
     let clockSvg = `<svg class="clock-analog-draw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${this.svgWidth} ${this.svgHeight}">`;
-    clockSvg += `<circle class="clock-perimeter clock-svg-elem" cx="${this.cx}" cy="${this.cy}" r="${this.radius}" fill="transparent" stroke="silver" stroke-width="3"/>`;
+    clockSvg += this.createMarkers("clock-marker-three-hour", 90, 0.9);
     clockSvg += this.createMarkers("clock-marker-hour", 30, 0.10);
     clockSvg += this.createMarkers("clock-marker-minute", 5, 0.08);
-    clockSvg += this.createMarkers("clock-marker-three-hour", 90, 0.9);
     clockSvg += `<svg id=${this.clockhands}>`;
-    const {hh, mm, ss} = SVGWatch.getHandsDegrees();
-    clockSvg += this.createHand("clock-hand-hour", polarToCartesian(this.radius * 0.3, hh));
-    clockSvg += this.createHand("clock-hand-minutes", polarToCartesian(this.radius * 0.7, mm));
-    clockSvg += this.createHand("clock-hand-seconds", polarToCartesian(this.radius * 0.8, ss));
+    const {hh, mm, ss} = SVGWatch.getHandsDegrees(this.tz);
+    clockSvg += this.createHand("clock-hand-hour", polarToCartesian(this.hhLength, hh));
+    clockSvg += this.createHand("clock-hand-minutes", polarToCartesian(this.mmLength, mm));
+    clockSvg += this.createHand("clock-hand-seconds", polarToCartesian(this.ssLength, ss));
     clockSvg += `</svg>`;
-    clockSvg += this.putText("3", polarToCartesian(this.radius * 0.86, 357.5));
-    clockSvg += this.putText("12", polarToCartesian(this.radius * 0.82, 90)); // Two digits "1" and "2"
-    clockSvg += this.putText("9", polarToCartesian(this.radius * 0.86, 182.5));
-    clockSvg += this.putText("6", polarToCartesian(this.radius * 0.86, 270));
+    clockSvg += this.putText("12", polarToCartesian(this.radius * 0.75, 90)); // Two digits "1" and "2"
+    clockSvg += this.putText("3", polarToCartesian(this.radius * 0.84, 355));
+    clockSvg += this.putText("6", polarToCartesian(this.radius * 0.89, 270));
+    clockSvg += this.putText("9", polarToCartesian(this.radius * 0.84, 184));
+    clockSvg += `<circle class="clock-perimeter clock-svg-elem" cx="${this.cx}" cy="${this.cy}" r="${this.radius}" fill="transparent" stroke="silver" stroke-width="3"/>`;
     return clockSvg;
   }
 
@@ -96,8 +108,8 @@ class SVGWatch {
   }
 
   // getHandsDegrees Gets cloak hands in  degrees angles relative to x-axis
-  static getHandsDegrees() {
-    const t = new Date(); // Get browsers local date and time.
+  static getHandsDegrees(tz) {
+    const t = timeAtUTCOffset(tz); // Get browsers local date and time.
     const ss = 90 - t.getSeconds() * 6;
     const mm = 90 - t.getMinutes() * 6 - 0.1 * t.getSeconds();
     const hh = 90 - 30 * t.getHours() - 0.5 * t.getMinutes();
@@ -106,10 +118,10 @@ class SVGWatch {
 
   // redrawHands convenience handlers for drawing clock hands at local timezone
   redrawHands() {
-    const {hh, mm, ss} = SVGWatch.getHandsDegrees();
-    let handsSvg = this.createHand("clock-hand-hour", polarToCartesian(this.radius * 0.3, hh));
-    handsSvg += this.createHand("clock-hand-minutes", polarToCartesian(this.radius * 0.7, mm));
-    handsSvg += this.createHand("clock-hand-seconds", polarToCartesian(this.radius * 0.8, ss));
+    const {hh, mm, ss} = SVGWatch.getHandsDegrees(this.tz);
+    let handsSvg = this.createHand("clock-hand-hour", polarToCartesian(this.hhLength, hh));
+    handsSvg += this.createHand("clock-hand-minutes", polarToCartesian(this.mmLength, mm));
+    handsSvg += this.createHand("clock-hand-seconds", polarToCartesian(this.ssLength, ss));
     const el = document.getElementById(this.clockhands);
     el.innerHTML = handsSvg;
   }
