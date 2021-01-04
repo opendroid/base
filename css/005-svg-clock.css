@@ -1,0 +1,81 @@
+/* Main section that  displays all clocks, a flex box of clocks */
+section.clocks {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+
+/* */
+section.clock-analog {
+    border: 1px dashed hotpink;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 20%;
+}
+
+svg.clock-analog-draw {
+    width: 100%;
+    height: 100%;
+    border: 1px dashed lightskyblue;
+}
+
+svg line.clock-marker-hour {
+    stroke: gold;
+    stroke-width: 2;
+}
+
+svg line.clock-marker-minute {
+    stroke: gold;
+    stroke-width: 1;
+}
+
+svg line.clock-marker-three-hour {
+    stroke: gold;
+    stroke-width: .09;
+}
+
+svg line.clock-hand-hour {
+    stroke: cadetblue;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+svg line.clock-hand-minutes {
+    stroke: lightblue;
+    stroke-width: 1;
+    stroke-linecap: round;
+
+}
+
+svg line.clock-hand-seconds {
+    stroke: silver;
+    stroke-width: 0.5;
+    stroke-linecap: round;
+}
+
+svg text.clock-marker-hour-text {
+    fill: lightcoral;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 0.2em;
+    text-anchor: middle;
+}
+
+.clock-analog:nth-last-child(even) {
+    background-color: beige;
+    border: 1rem solid gold;
+    border-bottom: 1rem solid goldenrod;
+    border-radius: 1rem;
+}
+
+.clock-analog:nth-last-child(odd) {
+    background-color: aliceblue;
+    border: 1rem solid silver;
+    border-bottom: 1rem solid slategrey;
+    border-radius: 1rem;
+}

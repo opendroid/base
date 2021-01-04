@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Clock</title>
+    <link rel="stylesheet" href="../css/005-svg-clock.css">
+    <script type="text/javascript" src="../js/clockAnalog.js"></script>
+</head>
+<body>
+<section class="clocks">
+    <section class="clock-analog" id="clock-analog-one"></section>
+    <section class="clock-analog" id="clock-analog-two"></section>
+    <section class="clock-analog" id="clock-analog-three"></section>
+    <section class="clock-analog" id="clock-analog-four"></section>
+    <section class="clock-analog" id="clock-analog-five"></section>
+    <section class="clock-analog" id="clock-analog-six"></section>
+    <section class="clock-analog" id="clock-analog-seven"></section>
+    <section class="clock-analog" id="clock-analog-eight"></section>
+</section>
+
+<!-- Script to draw and redraw clocks every second. -->
+<script type="text/javascript">
+  const watchIds = ["clock-analog-one", "clock-analog-two", "clock-analog-three", "clock-analog-four",
+    "clock-analog-five", "clock-analog-six", "clock-analog-seven", "clock-analog-eight"];
+  let watches = watchIds.map(w => new SVGWatch(w));
+  watches.forEach(w => w.drawClock());
+  setInterval(() => watches.forEach(w => w.redrawHands()), 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%">
+    <circle cx="50%" cy="50%" r="25%" fill="transparent" stroke="red"/>
+    <text x="50%" y="50%" font-size="80" text-anchor="middle" fill="brown"> Circle </text>
+    <text x="50%" y="60%" font-size="80" text-anchor="middle" fill="brown"> Object </text>
+</svg>

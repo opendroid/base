@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>001-Basic Div</title>
+    <link rel="stylesheet" href="../css/002-box-model.css">
+</head>
+<body>
+<!--
+See where html and body area, notice
+content-height: depends on content
+
+Box model: Notice how content is placed in a box.
+ Display property: block (default) or inline
+   Block Boxes takes 100% of width. Text content will move to next line.
+   Inline Box stretches to fill in content (text in this example).
+ Box properties: margin . border . padding . content.
+
+ Note: Content not included in other blocks like main.
+-->
+<h1>Box: Margin Padding Block and Inline</h1>
+<h1 class="margin-left">&lt== margin 1 rem. Hello H1 (BLOCK)</h1>
+<h1 class="padding-left">&lt== padding 1 rem. Hello H1 (BLOCK)</h1>
+<h1 class="margin-top">Hello H1 (BLOCK) margin top 3rem</h1>
+<h1 class="padding-top">Hello H1 (BLOCK) padding top 3rem</h1>
+<h1 class="padding-top padding-bottom text-center bg-lightskyblue">Hello H1 (BLOCK) padding top/bottom 3rem</h1>
+<h1 class="text-center">Hello H1 (BLOCK) text-align=center</h1>
+<h1 class="text-right">Hello H1 (BLOCK)</h1>
+<h1 class="text-right margin-right">Hello H1 (BLOCK) margin ==&gt</h1>
+<h1 class="text-right padding-right">Hello H1 (BLOCK) padding ==&gt</h1>
+
+
+<!-- Another h1, inline -->
+<h1 class="inline">Hello H1-1st <span class="txt-hotpink">(INLINE)</span></h1>
+<h1 class="inline">Hello H1-2nd <span class="txt-hotpink">(INLINE)</span></h1>
+<h1 class="inline margin-left">&lt== margin left 1rem Hello H1-3rd <span class="txt-hotpink">(INLINE)</span></h1>
+<h1 class="margin-left padding-left">&lt== margin + padding 1rem Hello H1 (Block)</h1>
+
+</body>
+</html>
+

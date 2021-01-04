@@ -1,0 +1,30 @@
+/* HTML box colors */
+html {
+    border: 3px solid white;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    border: 3px solid greenyellow;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+}
+
+
+svg, object {
+    border: 1px dashed blueviolet;
+    background-color: lightgray;
+}
+
+object {
+    flex-grow: inherit;
+    width: 40vw;
+    height: 40vh;
+}
