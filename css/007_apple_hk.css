@@ -1,0 +1,236 @@
+/*
+ Material pallet:
+ Primary-Dark: #000063
+ Primary: #311b92
+ Primary-light: #6746c3
+*/
+
+/* Keep it all fit */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Material theme colors */
+.primary {
+    background-color: #311b92;
+}
+
+.primary-light {
+    background-color: #6746c3;
+}
+
+.primary-dark {
+    background-color: #000063;
+}
+
+.secondary {
+    background-color: #311a91;
+}
+
+.secondary-light {
+    background-color: #311a91;
+}
+
+.secondary-dark {
+    background-color: #000062;
+}
+
+/* hk app top-bar headline  */
+section.hk-top-bar {
+    position: fixed;
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+svg.headline-icon {
+    margin-left: 1rem;
+    align-self: center;
+    height: 32px;
+    width: 32px;
+    fill: white;
+    border: 2px solid #000063;
+}
+
+svg.headline-icon:hover {
+    background-color: #6746c3;
+    opacity: 0.8;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+section.hk-top-bar h3.headline-title {
+    text-align: center;
+    align-self: center;
+    font-weight: 300;
+}
+
+.headline-dev-anchor {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+section.hk-top-bar img.headline-dev {
+    border: 2px solid #000063;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin-right: 1rem;
+    align-self: center;
+}
+
+section.hk-top-bar img.headline-dev:hover {
+    border: 2px solid white;
+}
+
+/* HK app Navigation Items */
+section.hk-nav {
+    display: inline;
+    position: fixed;
+    width: 12rem;
+    top: 3rem; /* same as section.hk-top-bar */
+    bottom: 0;
+    background-color: #EAECEE;
+    border-right: 2px solid #EAECEE;
+    z-index: 10;
+}
+
+section.hk-nav-hide {
+    display: none;
+}
+
+.nav-items-list {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items-list-item {
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+}
+
+ul.nav-items-list li.active {
+    background-color: white;
+    pointer-events: none;
+    border-bottom: 1px solid #EAECEE;
+    border-top: 1px solid #EAECEE;
+}
+
+
+.nav-items-list-anchor {
+    display: flex;
+    text-decoration: none;
+    height: 100%;
+    align-content: center;
+}
+
+.nav-items-list-anchor:hover {
+    background-color: white;
+}
+
+.nav-items-list-icon {
+    height: 32px;
+    width: 32px;
+    fill: #000063;
+    margin-left: 1rem;
+}
+
+.nav-items-list-text {
+    color: #000063;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+a.nav-items-list-anchor svg.active {
+    fill: #6746c3;
+}
+
+a.nav-items-list-anchor h4.active {
+    color: #6746c3;
+}
+
+/* HK Secondary Menu */
+.hk-top-bar-secondary {
+    position: fixed;
+    height: 2rem;
+    width: 100%;
+    margin-top: 3rem;
+    margin-left: 12rem; /* same as width of 'section.hk-nav' */
+    z-index: 10;
+}
+
+.hk-top-bar-secondary-no-margin {
+    margin-left: 0;
+}
+
+.hk-top-bar-secondary-margin {
+    margin-left: 12rem;
+}
+.secondary-nav-items-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 2rem;
+    border-bottom: 1px solid #6746c3;
+}
+
+.secondary-nav-items-list-item {
+    text-align: center;
+    width: 8rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+ul.secondary-nav-items-list .active {
+    background-color: #EAECEE;
+    pointer-events: none;
+}
+
+.secondary-nav-items-list-item-anchor {
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+li.secondary-nav-items-list-item a.active {
+    color: #6746c3;
+}
+/* Main content box. */
+main.hk-main {
+    border: 1px dotted hotpink;
+    background-color: hotpink;
+    margin-left: 12rem; /* same as width of 'section.hk-nav' */
+    padding-top: 5rem;
+    width: 100%;
+}
+
+main.hk-main-no-margin {
+    margin-left: 0;
+}
+
+.chart_div, .chart_div_2 {
+    border: 10px solid yellow;
+    position: relative;
+    width: 100%;
+}
