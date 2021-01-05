@@ -9,83 +9,92 @@
     <script type="text/javascript" src="../js/collapseSideNav.js"></script>
 </head>
 <body>
-<!-- Top bar -->
-<section class="hk-top-bar primary-dark">
+<!-- HTB: Headline top bar -->
+<section class="htb primary-dark">
+    <!-- Headline top bar: icon -->
     <svg xmlns="http://www.w3.org/2000/svg"
-         class="headline-icon"
+         class="htbi"
          onclick="toggleHKNav()"
          viewBox="0 0 24 24">
         <path d="M0 0h24v24H0V0z" fill="none"/>
         <path d="M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z"/>
     </svg>
-    <h3 class="headline-title"> Your Apple Health data</h3>
-    <a class="headline-dev-anchor" href="https://github.com/opendroid/">
-        <img class="headline-dev" src="../images/developer.jpg" alt="Developer">
+    <!-- Headline top bar: title -->
+    <h3 class="htbt"> Your Apple Health data</h3>
+    <!-- Headline top bar: anchor  -->
+    <a class="htba" href="https://github.com/opendroid/">
+        <!--  Headline top bar: anchor image     -->
+        <img class="htbai" src="../images/developer.jpg" alt="Developer">
     </a>
 </section>
 
 <!-- Left side navigation -->
-<section id="hk-nav" class="hk-nav">
-    <nav class="hk-nav-primary">
-        <ul class="nav-items-list">
-            <li class="nav-items-list-item active">
-                <a class="nav-items-list-anchor" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         class="nav-items-list-icon active"
-                         viewBox="0 0 24 24">
-                        <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
-                    </svg>
-                    <h4 class="nav-items-list-text active">Records</h4>
-                </a>
-            </li>
-            <li class="nav-items-list-item">
-                <a class="nav-items-list-anchor" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         class="nav-items-list-icon"
-                         enable-background="new 0 0 24 24" height="24"
-                         viewBox="0 0 24 24" width="24">
-                        <path d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M13.5,6c0.55,0,1,0.45,1,1 c0,0.55-0.45,1-1,1s-1-0.45-1-1C12.5,6.45,12.95,6,13.5,6z M16,12c-0.7,0-2.01-0.54-2.91-1.76l-0.41,2.35L14,14.03V18h-1v-3.58 l-1.11-1.21l-0.52,2.64L7.6,15.08l0.2-0.98l2.78,0.57l0.96-4.89L10,10.35V12H9V9.65l3.28-1.21c0.49-0.18,1.03,0.06,1.26,0.53 C14.37,10.67,15.59,11,16,11V12z"/>
-                    </svg>
-                    <h4 class="nav-items-list-text">Activity</h4>
-                </a>
-            </li>
-            <li class="nav-items-list-item">
-                <a class="nav-items-list-anchor" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         class="nav-items-list-icon" enable-background="new 0 0 24 24" height="24"
-                         viewBox="0 0 24 24" width="24">
-                        <path d="M6,13c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S8.2,13,6,13z M12,3C9.8,3,8,4.8,8,7s1.8,4,4,4s4-1.8,4-4S14.2,3,12,3z M18,13 c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S20.2,13,18,13z"/>
-                    </svg>
-                    <h4 class="nav-items-list-text">Summary</h4>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</section>
+<nav id="nav-primary" class="np">
+    <!-- Nav Primary  Un-numbered list   -->
+    <ul class="npu">
+        <li class="npul">
+            <a class="npula" href="#">
+                <!-- Nav Primary:  Un-numbered list-item - Anchor SVG Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="npulas"
+                     viewBox="0 0 24 24">
+                    <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
+                </svg>
+                <!-- Nav Primary:  Un-numbered list-item - Anchor heading -->
+                <h4 class="npulah">Records</h4>
+            </a>
+        </li>
+        <li class="npul active">
+            <a class="npula" href="#">
+                <!-- Nav Primary:  Un-numbered list-item - Anchor SVG Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="npulas active"
+                     enable-background="new 0 0 24 24" height="24"
+                     viewBox="0 0 24 24" width="24">
+                    <path d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M13.5,6c0.55,0,1,0.45,1,1 c0,0.55-0.45,1-1,1s-1-0.45-1-1C12.5,6.45,12.95,6,13.5,6z M16,12c-0.7,0-2.01-0.54-2.91-1.76l-0.41,2.35L14,14.03V18h-1v-3.58 l-1.11-1.21l-0.52,2.64L7.6,15.08l0.2-0.98l2.78,0.57l0.96-4.89L10,10.35V12H9V9.65l3.28-1.21c0.49-0.18,1.03,0.06,1.26,0.53 C14.37,10.67,15.59,11,16,11V12z"/>
+                </svg>
+                <!-- Nav Primary:  Un-numbered list-item - Anchor heading -->
+                <h4 class="npulah active">Activity</h4>
+            </a>
+        </li>
+        <li class="npul">
+            <a class="npula" href="#">
+                <!-- Nav Primary:  Un-numbered list-item - Anchor SVG Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="npulas" enable-background="new 0 0 24 24" height="24"
+                     viewBox="0 0 24 24" width="24">
+                    <path d="M6,13c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S8.2,13,6,13z M12,3C9.8,3,8,4.8,8,7s1.8,4,4,4s4-1.8,4-4S14.2,3,12,3z M18,13 c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S20.2,13,18,13z"/>
+                </svg>
+                <!-- Nav Primary:  Un-numbered list-item - Anchor heading -->
+                <h4 class="npulah">Summary</h4>
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <!-- Secondary navigation -->
-<section id="top-bar-secondary" class="hk-top-bar-secondary secondary-light">
-    <nav class="hk-nav-secondary">
-        <ul class="secondary-nav-items-list">
-            <li class="secondary-nav-items-list-item active">
-                <a class="secondary-nav-items-list-item-anchor active" href="#"> Devices </a>
-            </li>
-            <li class="secondary-nav-items-list-item">
-                <a class="secondary-nav-items-list-item-anchor" href="#"> Types </a>
-            </li>
-            <li class="secondary-nav-items-list-item">
-                <a class="secondary-nav-items-list-item-anchor" href="#"> Metadata</a>
-            </li>
-        </ul>
-    </nav>
-</section>
+<nav id="nav-secondary" class="ns secondary-light">
+    <!-- Nav Secondary  Un-numbered list  -->
+    <ul class="nsu">
+        <!-- HK app: Nav Secondary: Unnumbered list: List Item -->
+        <li class="nsul">
+            <a class="nsula" href="#"> Devices </a>
+        </li>
+        <li class="nsul">
+            <a class="nsula" href="#"> Types </a>
+        </li>
+        <li class="nsul active">
+            <a class="nsula active" href="#"> Metadata</a>
+        </li>
+    </ul>
+</nav>
 
 <!-- The main body -->
 <main id="hk-main" class="hk-main">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="../js/gcharts.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages': ['corechart']});
       google.charts.setOnLoadCallback(drawChartOne);
       google.charts.setOnLoadCallback(drawChartTwo);
     </script>

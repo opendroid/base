@@ -39,8 +39,8 @@ html, body {
     background-color: #000062;
 }
 
-/* hk app top-bar headline  */
-section.hk-top-bar {
+/* HTB: Headline top bar Style  */
+section.htb {
     position: fixed;
     display: flex;
     height: 3rem;
@@ -50,7 +50,8 @@ section.hk-top-bar {
     z-index: 10;
 }
 
-svg.headline-icon {
+/* Headline top bar: icon Style */
+svg.htbi {
     margin-left: 1rem;
     align-self: center;
     height: 32px;
@@ -59,20 +60,23 @@ svg.headline-icon {
     border: 2px solid #000063;
 }
 
-svg.headline-icon:hover {
+/* Headline top bar: icon hover Style */
+svg.htbi:hover {
     background-color: #6746c3;
     opacity: 0.8;
     border-radius: 50%;
     border: 2px solid white;
 }
 
-section.hk-top-bar h3.headline-title {
+/* Headline top bar: title */
+h3.htbt {
     text-align: center;
     align-self: center;
     font-weight: 300;
 }
 
-.headline-dev-anchor {
+/* Headline top bar: anchor */
+a.htba {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -80,7 +84,8 @@ section.hk-top-bar h3.headline-title {
     line-height: 3rem;
 }
 
-section.hk-top-bar img.headline-dev {
+/* Headline top bar: anchor image */
+img.htbai {
     border: 2px solid #000063;
     border-radius: 50%;
     height: 32px;
@@ -88,28 +93,27 @@ section.hk-top-bar img.headline-dev {
     margin-right: 1rem;
     align-self: center;
 }
-
-section.hk-top-bar img.headline-dev:hover {
+img.htbai:hover {
     border: 2px solid white;
 }
 
-/* HK app Navigation Items */
-section.hk-nav {
-    display: inline;
+/* HK app: Nav primary */
+nav.np {
     position: fixed;
     width: 12rem;
-    top: 3rem; /* same as section.hk-top-bar */
+    top: 3rem; /* same as section.htb */
     bottom: 0;
     background-color: #EAECEE;
     border-right: 2px solid #EAECEE;
     z-index: 10;
 }
 
-section.hk-nav-hide {
+#nav-primary.hide {
     display: none;
 }
 
-.nav-items-list {
+/* Nav Primary:  Un-numbered list */
+ul.npu {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -117,40 +121,43 @@ section.hk-nav-hide {
     padding: 0;
     margin: 0;
 }
-
-.nav-items-list-item {
-    width: 100%;
-    height: 2rem;
-    margin: 0;
-}
-
-ul.nav-items-list li.active {
+ul.npu li.active {
     background-color: white;
     pointer-events: none;
     border-bottom: 1px solid #EAECEE;
     border-top: 1px solid #EAECEE;
 }
 
+/* Nav Primary:  Un-numbered list-item */
+li.npul {
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+}
 
-.nav-items-list-anchor {
+/* Nav Primary:  Un-numbered list-item - Anchor */
+a.npula {
     display: flex;
     text-decoration: none;
     height: 100%;
     align-content: center;
 }
-
-.nav-items-list-anchor:hover {
+a.npula:hover {
     background-color: white;
 }
 
-.nav-items-list-icon {
+/* Nav Primary:  Un-numbered list-item - Anchor SVG Icon */
+svg.npulas {
     height: 32px;
     width: 32px;
     fill: #000063;
     margin-left: 1rem;
 }
-
-.nav-items-list-text {
+a.npula svg.active {
+    fill: #6746c3;
+}
+/* Nav Primary:  Un-numbered list-item - Anchor SVG Heading */
+h4.npulah {
     color: #000063;
     font-weight: 300;
     margin-top: 0;
@@ -158,17 +165,12 @@ ul.nav-items-list li.active {
     margin-left: 1rem;
     align-self: center;
 }
-
-a.nav-items-list-anchor svg.active {
-    fill: #6746c3;
-}
-
-a.nav-items-list-anchor h4.active {
+a.npula h4.active {
     color: #6746c3;
 }
 
-/* HK Secondary Menu */
-.hk-top-bar-secondary {
+/* HK app: Nav Secondary */
+nav.ns {
     position: fixed;
     height: 2rem;
     width: 100%;
@@ -176,15 +178,13 @@ a.nav-items-list-anchor h4.active {
     margin-left: 12rem; /* same as width of 'section.hk-nav' */
     z-index: 10;
 }
-
-.hk-top-bar-secondary-no-margin {
+/* Class to toggle secondary nav */
+#nav-secondary.no-margin {
     margin-left: 0;
 }
 
-.hk-top-bar-secondary-margin {
-    margin-left: 12rem;
-}
-.secondary-nav-items-list {
+/* HK app: Nav Secondary: Unnumbered list */
+.nsu {
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -192,20 +192,20 @@ a.nav-items-list-anchor h4.active {
     height: 2rem;
     border-bottom: 1px solid #6746c3;
 }
-
-.secondary-nav-items-list-item {
+ul.nsu .active {
+    background-color: #EAECEE;
+    pointer-events: none;
+    color: #6746c3;
+}
+/* HK app: Nav Secondary: Unnumbered list: List Item */
+.nsul {
     text-align: center;
     width: 8rem;
     height: 2rem;
     margin-left: 1rem;
 }
 
-ul.secondary-nav-items-list .active {
-    background-color: #EAECEE;
-    pointer-events: none;
-}
-
-.secondary-nav-items-list-item-anchor {
+a.nsula {
     display: block;
     height: 2rem;
     line-height: 2rem;
@@ -213,9 +213,6 @@ ul.secondary-nav-items-list .active {
     color: white;
 }
 
-li.secondary-nav-items-list-item a.active {
-    color: #6746c3;
-}
 /* Main content box. */
 main.hk-main {
     border: 1px dotted hotpink;
@@ -225,7 +222,8 @@ main.hk-main {
     width: 100%;
 }
 
-main.hk-main-no-margin {
+/* HK-Main content */
+#hk-main.no-margin {
     margin-left: 0;
 }
 
