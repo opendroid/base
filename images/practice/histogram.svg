@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="800" style="overflow: hidden;">
+    <defs id="_ABSTRACT_RENDERER_ID_0">
+        <clipPath id="_ABSTRACT_RENDERER_ID_1">
+            <rect x="229" y="153" width="742" height="494"/>
+        </clipPath>
+        <filter id="_ABSTRACT_RENDERER_ID_4">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+            <feOffset dx="1" dy="1"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.1"/>
+            </feComponentTransfer>
+        </filter>
+    </defs>
+    <rect x="0" y="0" width="1200" height="800" stroke="none" stroke-width="0" fill="#ffffff"/>
+
+    <text x="229" y="124.6" font-family="Arial" font-size="16" font-weight="bold" stroke="none"
+          stroke-width="0" fill="#000000">How Much Pizza I Ate Last Night
+    </text>
+    <rect x="229" y="111" width="742" height="16" stroke="none" stroke-width="0" fill-opacity="0"
+          fill="#ffffff"/>
+
+    <rect x="987" y="153" width="197" height="16" stroke="none" stroke-width="0" fill-opacity="0"
+          fill="#ffffff"/>
+
+    <rect x="987" y="153" width="197" height="16" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"/>
+
+    <text x="1025" y="166.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#222222">Slices
+    </text>
+
+    <rect x="987" y="153" width="32" height="16" stroke="none" stroke-width="0" fill="#3366cc"/>
+
+    <rect x="229" y="153" width="742" height="494" stroke="none" stroke-width="0" fill-opacity="0"
+          fill="#ffffff"/>
+
+    <rect x="353" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="229" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="476" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="600" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="723" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="847" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="970" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="red"/>
+    <rect x="291" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="green"/>
+    <rect x="414" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="green"/>
+    <rect x="538" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="green"/>
+    <rect x="661" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="green"/>
+    <rect x="785" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="green"/>
+    <rect x="908" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="green"/>
+
+    <rect x="230" y="172" width="740" height="61" stroke="none" stroke-width="0" fill="black"/>
+    <rect x="230" y="271" width="246" height="61" stroke="none" stroke-width="0" fill="#3366cc"/>
+    <rect x="230" y="370" width="246" height="60" stroke="none" stroke-width="0" fill="#3366cc"/>
+    <rect x="230" y="468" width="246" height="61" stroke="none" stroke-width="0" fill="#3366cc"/>
+    <rect x="230" y="567" width="493" height="61" stroke="none" stroke-width="0" fill="#3366cc"/>
+
+    <rect x="229" y="153" width="1" height="494" stroke="none" stroke-width="0" fill="#333333"/>
+
+
+    <text text-anchor="middle" x="229.5" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">0.0
+    </text>
+    <text text-anchor="middle" x="353" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">0.5
+    </text>
+
+    <text text-anchor="middle" x="476.5" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">1.0
+    </text>
+
+    <text text-anchor="middle" x="600" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">1.5
+    </text>
+
+    <text text-anchor="middle" x="723.5" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">2.0
+    </text>
+
+    <text text-anchor="middle" x="847" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">2.5
+    </text>
+
+    <text text-anchor="middle" x="970.5" y="670.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#444444">3.0
+    </text>
+
+    <text text-anchor="end" x="213" y="208.4" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#222222">Mushrooms
+    </text>
+
+    <text text-anchor="end" x="213" y="307" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#222222">Onions
+    </text>
+
+    <text text-anchor="end" x="213" y="405.6" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#222222">Olives
+    </text>
+
+    <text text-anchor="end" x="213" y="504.2" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#222222">Zucchini
+    </text>
+
+    <text text-anchor="end" x="213" y="602.8000000000001" font-family="Arial" font-size="16" stroke="none"
+          stroke-width="0" fill="#222222">Pepperoni
+    </text>
+
+</svg>

@@ -62,7 +62,6 @@ svg.htbi {
 
 /* Headline top bar: icon hover Style */
 svg.htbi:hover {
-    background-color: #6746c3;
     opacity: 0.8;
     border-radius: 50%;
     border: 2px solid white;
@@ -197,8 +196,9 @@ ul.nsu .active {
     pointer-events: none;
     color: #6746c3;
 }
+
 /* HK app: Nav Secondary: Unnumbered list: List Item */
-.nsul {
+li.nsul {
     text-align: center;
     width: 8rem;
     height: 2rem;
@@ -206,11 +206,18 @@ ul.nsu .active {
 }
 
 a.nsula {
-    display: block;
     height: 2rem;
+    width: 8rem;
     line-height: 2rem;
     text-decoration: none;
     color: white;
+}
+
+li.nsul:hover{
+    background-color: #EAECEE;
+}
+li.nsul:hover > a.nsula {
+    color: #6746c3;
 }
 
 /* Main content box. */

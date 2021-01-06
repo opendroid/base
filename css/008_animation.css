@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    border: 2px solid crimson;
+    background-color: #EAECEE;
+}
+
+.move {
+    /* Display content of div in center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* Dimensions */
+    height: 100px;
+    width: 100px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: yellow greenyellow dodgerblue black;
+    /* Animation */
+    animation-name: bounce;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+/* Animation path defined */
+@keyframes bounce {
+    0% {
+        margin-left: 10%;
+        margin-top: 2%;
+        border-radius: 10%;
+        background-color: violet;
+        transform: rotate(0deg)
+    }
+    50% {
+        margin-left: 50%;
+        margin-top: 25%;
+        border-radius: 50%;
+        background-color: mediumvioletred;
+        transform: rotate(1800deg)
+    }
+    100% {
+        margin-left: 80%;
+        margin-top: 2%;
+        border-radius: 10%;
+        background-color: red;
+        transform: rotate(360deg)
+    }
+}

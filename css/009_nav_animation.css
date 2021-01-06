@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.htb {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 2rem;
+    color: white;
+    text-align: center;
+    background-color: #000062;
+}
+
+.htb h3 {
+    border: 1px dotted white;
+    height: 2rem;
+    padding-top: 0.25rem;
+}
+
+.np {
+    position: fixed;
+    top: 2rem;
+    width: 6rem;
+    bottom: 0;
+    background-color: #6746c3;
+    color: white;
+    border: 2px dotted fuchsia;
+    overflow-y: scroll;
+    animation-name: np-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes np-animation {
+    0% {
+        left: 0;
+        color: white;
+    }
+    100% {
+        left: -6rem;
+        color: red;
+    }
+}
+
+.npu {
+    margin-left: 2rem;
+    list-style-type: none;
+}
+
+.npul {
+    margin-bottom: 1rem;
+}
+
+.ns {
+    position: fixed;
+    margin-left: 6rem;
+    top: 2rem;
+    border: 2px dotted hotpink;
+    background-color: #6746c3;
+    width: 100%;
+    color: white;
+    animation-name: ns-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes ns-animation {
+    0% {
+        margin-left: 6rem;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+.nsu {
+    display: flex;
+    margin-left: 2rem;
+    list-style-type: none;
+}
+
+.nsul {
+    margin-left: 1rem;
+    width: 6rem;
+    border-right: 1px solid white;
+}
+
+main {
+    margin-left: 8rem;
+    margin-top: 4rem;
+    border: 2px dotted fuchsia;
+    width: 70%;
+    animation-name: main-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes main-animation {
+    0% {
+        margin-left: 8rem;
+    }
+    100% {
+        margin-left: 2rem;
+    }
+}
+
+.mu {
+    margin-left: 1rem;
+}
